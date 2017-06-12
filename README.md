@@ -1,2 +1,5 @@
-# DanmukuMirror
-[WIP] Yet another third party danmuku hime for macOS
+# Danmuku Mirror
+
+Yet another Danmuku Hime for live.bilibili.com
+
+WIP

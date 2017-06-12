@@ -1,0 +1,662 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6C050D6C1E44F66100F262C2 /* MusicStationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C050D6B1E44F66100F262C2 /* MusicStationViewController.swift */; };
+		6C0585C11E2BC6B20016B49E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0585C01E2BC6B20016B49E /* AppDelegate.swift */; };
+		6C0585C31E2BC6B20016B49E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0585C21E2BC6B20016B49E /* ViewController.swift */; };
+		6C0585C51E2BC6B20016B49E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C0585C41E2BC6B20016B49E /* Assets.xcassets */; };
+		6C0585C81E2BC6B20016B49E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C0585C61E2BC6B20016B49E /* Main.storyboard */; };
+		6C0585D31E2BC6B20016B49E /* Danmuku_MirrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0585D21E2BC6B20016B49E /* Danmuku_MirrorTests.swift */; };
+		6C0585DE1E2BC6B20016B49E /* Danmuku_MirrorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0585DD1E2BC6B20016B49E /* Danmuku_MirrorUITests.swift */; };
+		6C0585F11E2BC6E40016B49E /* DanmukuHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0585EE1E2BC6E40016B49E /* DanmukuHandler.swift */; };
+		6C0585F21E2BC6E40016B49E /* Danmuku.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0585EF1E2BC6E40016B49E /* Danmuku.swift */; };
+		6C0585F31E2BC6E40016B49E /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0585F01E2BC6E40016B49E /* Util.swift */; };
+		6C0585F61E2BC6EA0016B49E /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0585F41E2BC6EA0016B49E /* SwiftyJSON.swift */; };
+		6C0585F71E2BC6EA0016B49E /* HandyExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0585F51E2BC6EA0016B49E /* HandyExtension.swift */; };
+		6C0585FA1E2BCB5A0016B49E /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0585F91E2BCB5A0016B49E /* MainMenu.swift */; };
+		6C1A93CC1E2F5FB2004680CC /* DanmukuWindowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1A93CB1E2F5FB2004680CC /* DanmukuWindowViewController.swift */; };
+		6C32EA3D1E2E5D050003A780 /* AboutWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C32EA3C1E2E5D050003A780 /* AboutWindowController.swift */; };
+		6C32EA3F1E2E5EF80003A780 /* AboutWindowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C32EA3E1E2E5EF80003A780 /* AboutWindowViewController.swift */; };
+		6C44767F1E3B7974000EE9E1 /* SettingGeneralTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C44767E1E3B7974000EE9E1 /* SettingGeneralTabViewController.swift */; };
+		6C4476821E433A78000EE9E1 /* MusicStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C4476811E433A78000EE9E1 /* MusicStation.swift */; };
+		6C4476861E43604B000EE9E1 /* AccessoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C4476851E43604B000EE9E1 /* AccessoryViewController.swift */; };
+		6C4476881E436B63000EE9E1 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C4476871E436B63000EE9E1 /* Song.swift */; };
+		6C56F8211E39F81900DAE713 /* SettingWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C56F8201E39F81900DAE713 /* SettingWindowController.swift */; };
+		6C91D9BE1E2FD5A4008D0A0F /* MulticastDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C91D9BD1E2FD5A4008D0A0F /* MulticastDelegate.swift */; };
+		6C91D9F91E32039F008D0A0F /* DanmukuWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C91D9F81E32039F008D0A0F /* DanmukuWindowController.swift */; };
+		6CAC20841E71506D00A69A3E /* DMColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CAC20831E71506D00A69A3E /* DMColor.swift */; };
+		6CE914FF1E472FA90006D266 /* RingBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE914FE1E472FA90006D266 /* RingBuffer.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6C0585CF1E2BC6B20016B49E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6C0585B51E2BC6B20016B49E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6C0585BC1E2BC6B20016B49E;
+			remoteInfo = "Danmuku Mirror";
+		};
+		6C0585DA1E2BC6B20016B49E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6C0585B51E2BC6B20016B49E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6C0585BC1E2BC6B20016B49E;
+			remoteInfo = "Danmuku Mirror";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6C050D6B1E44F66100F262C2 /* MusicStationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicStationViewController.swift; sourceTree = "<group>"; };
+		6C0585BD1E2BC6B20016B49E /* Danmuku Mirror.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Danmuku Mirror.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C0585C01E2BC6B20016B49E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6C0585C21E2BC6B20016B49E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6C0585C41E2BC6B20016B49E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6C0585C71E2BC6B20016B49E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6C0585C91E2BC6B20016B49E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6C0585CE1E2BC6B20016B49E /* Danmuku MirrorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Danmuku MirrorTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C0585D21E2BC6B20016B49E /* Danmuku_MirrorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Danmuku_MirrorTests.swift; sourceTree = "<group>"; };
+		6C0585D41E2BC6B20016B49E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6C0585D91E2BC6B20016B49E /* Danmuku MirrorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Danmuku MirrorUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C0585DD1E2BC6B20016B49E /* Danmuku_MirrorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Danmuku_MirrorUITests.swift; sourceTree = "<group>"; };
+		6C0585DF1E2BC6B20016B49E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6C0585EE1E2BC6E40016B49E /* DanmukuHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DanmukuHandler.swift; sourceTree = "<group>"; };
+		6C0585EF1E2BC6E40016B49E /* Danmuku.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Danmuku.swift; sourceTree = "<group>"; };
+		6C0585F01E2BC6E40016B49E /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		6C0585F41E2BC6EA0016B49E /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		6C0585F51E2BC6EA0016B49E /* HandyExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HandyExtension.swift; sourceTree = "<group>"; };
+		6C0585F91E2BCB5A0016B49E /* MainMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenu.swift; sourceTree = "<group>"; };
+		6C1A93CB1E2F5FB2004680CC /* DanmukuWindowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DanmukuWindowViewController.swift; sourceTree = "<group>"; };
+		6C32EA3C1E2E5D050003A780 /* AboutWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutWindowController.swift; sourceTree = "<group>"; };
+		6C32EA3E1E2E5EF80003A780 /* AboutWindowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutWindowViewController.swift; sourceTree = "<group>"; };
+		6C44767E1E3B7974000EE9E1 /* SettingGeneralTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingGeneralTabViewController.swift; sourceTree = "<group>"; };
+		6C4476811E433A78000EE9E1 /* MusicStation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicStation.swift; sourceTree = "<group>"; };
+		6C4476851E43604B000EE9E1 /* AccessoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessoryViewController.swift; sourceTree = "<group>"; };
+		6C4476871E436B63000EE9E1 /* Song.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
+		6C56F8201E39F81900DAE713 /* SettingWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingWindowController.swift; sourceTree = "<group>"; };
+		6C91D9BD1E2FD5A4008D0A0F /* MulticastDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MulticastDelegate.swift; path = ../MulticastDelegate.swift; sourceTree = "<group>"; };
+		6C91D9F81E32039F008D0A0F /* DanmukuWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DanmukuWindowController.swift; sourceTree = "<group>"; };
+		6CAC20831E71506D00A69A3E /* DMColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DMColor.swift; path = ../DMColor.swift; sourceTree = "<group>"; };
+		6CE914FE1E472FA90006D266 /* RingBuffer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RingBuffer.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6C0585BA1E2BC6B20016B49E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6C0585CB1E2BC6B20016B49E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6C0585D61E2BC6B20016B49E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6C0585B41E2BC6B20016B49E = {
+			isa = PBXGroup;
+			children = (
+				6C0585BF1E2BC6B20016B49E /* Danmuku Mirror */,
+				6C0585D11E2BC6B20016B49E /* Danmuku MirrorTests */,
+				6C0585DC1E2BC6B20016B49E /* Danmuku MirrorUITests */,
+				6C0585BE1E2BC6B20016B49E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6C0585BE1E2BC6B20016B49E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6C0585BD1E2BC6B20016B49E /* Danmuku Mirror.app */,
+				6C0585CE1E2BC6B20016B49E /* Danmuku MirrorTests.xctest */,
+				6C0585D91E2BC6B20016B49E /* Danmuku MirrorUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6C0585BF1E2BC6B20016B49E /* Danmuku Mirror */ = {
+			isa = PBXGroup;
+			children = (
+				6C0585C01E2BC6B20016B49E /* AppDelegate.swift */,
+				6C0585C61E2BC6B20016B49E /* Main.storyboard */,
+				6C0585F91E2BCB5A0016B49E /* MainMenu.swift */,
+				6C0585EC1E2BC6D20016B49E /* Model */,
+				6C0585F81E2BC70C0016B49E /* Controller */,
+				6C0585EB1E2BC6C10016B49E /* Supporting Files */,
+			);
+			path = "Danmuku Mirror";
+			sourceTree = "<group>";
+		};
+		6C0585D11E2BC6B20016B49E /* Danmuku MirrorTests */ = {
+			isa = PBXGroup;
+			children = (
+				6C0585D21E2BC6B20016B49E /* Danmuku_MirrorTests.swift */,
+				6C0585D41E2BC6B20016B49E /* Info.plist */,
+			);
+			path = "Danmuku MirrorTests";
+			sourceTree = "<group>";
+		};
+		6C0585DC1E2BC6B20016B49E /* Danmuku MirrorUITests */ = {
+			isa = PBXGroup;
+			children = (
+				6C0585DD1E2BC6B20016B49E /* Danmuku_MirrorUITests.swift */,
+				6C0585DF1E2BC6B20016B49E /* Info.plist */,
+			);
+			path = "Danmuku MirrorUITests";
+			sourceTree = "<group>";
+		};
+		6C0585EB1E2BC6C10016B49E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6CAC20831E71506D00A69A3E /* DMColor.swift */,
+				6C0585F41E2BC6EA0016B49E /* SwiftyJSON.swift */,
+				6C0585F51E2BC6EA0016B49E /* HandyExtension.swift */,
+				6C91D9BD1E2FD5A4008D0A0F /* MulticastDelegate.swift */,
+				6C0585C41E2BC6B20016B49E /* Assets.xcassets */,
+				6C0585C91E2BC6B20016B49E /* Info.plist */,
+				6CE914FE1E472FA90006D266 /* RingBuffer.swift */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6C0585EC1E2BC6D20016B49E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6C4476801E433A3C000EE9E1 /* Plugins */,
+				6C0585ED1E2BC6DB0016B49E /* Core */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		6C0585ED1E2BC6DB0016B49E /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				6C0585EE1E2BC6E40016B49E /* DanmukuHandler.swift */,
+				6C0585EF1E2BC6E40016B49E /* Danmuku.swift */,
+				6C0585F01E2BC6E40016B49E /* Util.swift */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		6C0585F81E2BC70C0016B49E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6C56F81F1E39F7BC00DAE713 /* Setting Window */,
+				6C56F81E1E39F7A200DAE713 /* Danmuku Window */,
+				6C56F81D1E39F79100DAE713 /* About Window */,
+				6C0585C21E2BC6B20016B49E /* ViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		6C4476801E433A3C000EE9E1 /* Plugins */ = {
+			isa = PBXGroup;
+			children = (
+				6C4476811E433A78000EE9E1 /* MusicStation.swift */,
+				6C4476871E436B63000EE9E1 /* Song.swift */,
+			);
+			name = Plugins;
+			sourceTree = "<group>";
+		};
+		6C56F81D1E39F79100DAE713 /* About Window */ = {
+			isa = PBXGroup;
+			children = (
+				6C32EA3C1E2E5D050003A780 /* AboutWindowController.swift */,
+				6C32EA3E1E2E5EF80003A780 /* AboutWindowViewController.swift */,
+			);
+			name = "About Window";
+			sourceTree = "<group>";
+		};
+		6C56F81E1E39F7A200DAE713 /* Danmuku Window */ = {
+			isa = PBXGroup;
+			children = (
+				6C91D9F81E32039F008D0A0F /* DanmukuWindowController.swift */,
+				6C1A93CB1E2F5FB2004680CC /* DanmukuWindowViewController.swift */,
+				6C4476851E43604B000EE9E1 /* AccessoryViewController.swift */,
+				6C050D6B1E44F66100F262C2 /* MusicStationViewController.swift */,
+			);
+			name = "Danmuku Window";
+			sourceTree = "<group>";
+		};
+		6C56F81F1E39F7BC00DAE713 /* Setting Window */ = {
+			isa = PBXGroup;
+			children = (
+				6C56F8201E39F81900DAE713 /* SettingWindowController.swift */,
+				6C44767E1E3B7974000EE9E1 /* SettingGeneralTabViewController.swift */,
+			);
+			name = "Setting Window";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6C0585BC1E2BC6B20016B49E /* Danmuku Mirror */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6C0585E21E2BC6B20016B49E /* Build configuration list for PBXNativeTarget "Danmuku Mirror" */;
+			buildPhases = (
+				6C0585B91E2BC6B20016B49E /* Sources */,
+				6C0585BA1E2BC6B20016B49E /* Frameworks */,
+				6C0585BB1E2BC6B20016B49E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Danmuku Mirror";
+			productName = "Danmuku Mirror";
+			productReference = 6C0585BD1E2BC6B20016B49E /* Danmuku Mirror.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6C0585CD1E2BC6B20016B49E /* Danmuku MirrorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6C0585E51E2BC6B20016B49E /* Build configuration list for PBXNativeTarget "Danmuku MirrorTests" */;
+			buildPhases = (
+				6C0585CA1E2BC6B20016B49E /* Sources */,
+				6C0585CB1E2BC6B20016B49E /* Frameworks */,
+				6C0585CC1E2BC6B20016B49E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6C0585D01E2BC6B20016B49E /* PBXTargetDependency */,
+			);
+			name = "Danmuku MirrorTests";
+			productName = "Danmuku MirrorTests";
+			productReference = 6C0585CE1E2BC6B20016B49E /* Danmuku MirrorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		6C0585D81E2BC6B20016B49E /* Danmuku MirrorUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6C0585E81E2BC6B20016B49E /* Build configuration list for PBXNativeTarget "Danmuku MirrorUITests" */;
+			buildPhases = (
+				6C0585D51E2BC6B20016B49E /* Sources */,
+				6C0585D61E2BC6B20016B49E /* Frameworks */,
+				6C0585D71E2BC6B20016B49E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6C0585DB1E2BC6B20016B49E /* PBXTargetDependency */,
+			);
+			name = "Danmuku MirrorUITests";
+			productName = "Danmuku MirrorUITests";
+			productReference = 6C0585D91E2BC6B20016B49E /* Danmuku MirrorUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6C0585B51E2BC6B20016B49E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = ixan;
+				TargetAttributes = {
+					6C0585BC1E2BC6B20016B49E = {
+						CreatedOnToolsVersion = 8.2;
+						ProvisioningStyle = Automatic;
+					};
+					6C0585CD1E2BC6B20016B49E = {
+						CreatedOnToolsVersion = 8.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 6C0585BC1E2BC6B20016B49E;
+					};
+					6C0585D81E2BC6B20016B49E = {
+						CreatedOnToolsVersion = 8.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 6C0585BC1E2BC6B20016B49E;
+					};
+				};
+			};
+			buildConfigurationList = 6C0585B81E2BC6B20016B49E /* Build configuration list for PBXProject "Danmuku Mirror" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6C0585B41E2BC6B20016B49E;
+			productRefGroup = 6C0585BE1E2BC6B20016B49E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6C0585BC1E2BC6B20016B49E /* Danmuku Mirror */,
+				6C0585CD1E2BC6B20016B49E /* Danmuku MirrorTests */,
+				6C0585D81E2BC6B20016B49E /* Danmuku MirrorUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6C0585BB1E2BC6B20016B49E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C0585C51E2BC6B20016B49E /* Assets.xcassets in Resources */,
+				6C0585C81E2BC6B20016B49E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6C0585CC1E2BC6B20016B49E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6C0585D71E2BC6B20016B49E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6C0585B91E2BC6B20016B49E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C4476881E436B63000EE9E1 /* Song.swift in Sources */,
+				6CE914FF1E472FA90006D266 /* RingBuffer.swift in Sources */,
+				6C4476821E433A78000EE9E1 /* MusicStation.swift in Sources */,
+				6C32EA3F1E2E5EF80003A780 /* AboutWindowViewController.swift in Sources */,
+				6C4476861E43604B000EE9E1 /* AccessoryViewController.swift in Sources */,
+				6C44767F1E3B7974000EE9E1 /* SettingGeneralTabViewController.swift in Sources */,
+				6C0585C31E2BC6B20016B49E /* ViewController.swift in Sources */,
+				6C050D6C1E44F66100F262C2 /* MusicStationViewController.swift in Sources */,
+				6C0585F21E2BC6E40016B49E /* Danmuku.swift in Sources */,
+				6CAC20841E71506D00A69A3E /* DMColor.swift in Sources */,
+				6C0585F71E2BC6EA0016B49E /* HandyExtension.swift in Sources */,
+				6C91D9F91E32039F008D0A0F /* DanmukuWindowController.swift in Sources */,
+				6C1A93CC1E2F5FB2004680CC /* DanmukuWindowViewController.swift in Sources */,
+				6C0585FA1E2BCB5A0016B49E /* MainMenu.swift in Sources */,
+				6C0585F31E2BC6E40016B49E /* Util.swift in Sources */,
+				6C0585F61E2BC6EA0016B49E /* SwiftyJSON.swift in Sources */,
+				6C32EA3D1E2E5D050003A780 /* AboutWindowController.swift in Sources */,
+				6C56F8211E39F81900DAE713 /* SettingWindowController.swift in Sources */,
+				6C0585C11E2BC6B20016B49E /* AppDelegate.swift in Sources */,
+				6C0585F11E2BC6E40016B49E /* DanmukuHandler.swift in Sources */,
+				6C91D9BE1E2FD5A4008D0A0F /* MulticastDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6C0585CA1E2BC6B20016B49E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C0585D31E2BC6B20016B49E /* Danmuku_MirrorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6C0585D51E2BC6B20016B49E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C0585DE1E2BC6B20016B49E /* Danmuku_MirrorUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6C0585D01E2BC6B20016B49E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6C0585BC1E2BC6B20016B49E /* Danmuku Mirror */;
+			targetProxy = 6C0585CF1E2BC6B20016B49E /* PBXContainerItemProxy */;
+		};
+		6C0585DB1E2BC6B20016B49E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6C0585BC1E2BC6B20016B49E /* Danmuku Mirror */;
+			targetProxy = 6C0585DA1E2BC6B20016B49E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6C0585C61E2BC6B20016B49E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6C0585C71E2BC6B20016B49E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6C0585E01E2BC6B20016B49E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6C0585E11E2BC6B20016B49E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+			};
+			name = Release;
+		};
+		6C0585E31E2BC6B20016B49E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Danmuku Mirror/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.IxanProduction.Danmuku-Mirror";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		6C0585E41E2BC6B20016B49E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Danmuku Mirror/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.IxanProduction.Danmuku-Mirror";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		6C0585E61E2BC6B20016B49E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Danmuku MirrorTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.IxanProduction.Danmuku-MirrorTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Danmuku Mirror.app/Contents/MacOS/Danmuku Mirror";
+			};
+			name = Debug;
+		};
+		6C0585E71E2BC6B20016B49E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Danmuku MirrorTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.IxanProduction.Danmuku-MirrorTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Danmuku Mirror.app/Contents/MacOS/Danmuku Mirror";
+			};
+			name = Release;
+		};
+		6C0585E91E2BC6B20016B49E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Danmuku MirrorUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.IxanProduction.Danmuku-MirrorUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "Danmuku Mirror";
+			};
+			name = Debug;
+		};
+		6C0585EA1E2BC6B20016B49E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Danmuku MirrorUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.IxanProduction.Danmuku-MirrorUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "Danmuku Mirror";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6C0585B81E2BC6B20016B49E /* Build configuration list for PBXProject "Danmuku Mirror" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6C0585E01E2BC6B20016B49E /* Debug */,
+				6C0585E11E2BC6B20016B49E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6C0585E21E2BC6B20016B49E /* Build configuration list for PBXNativeTarget "Danmuku Mirror" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6C0585E31E2BC6B20016B49E /* Debug */,
+				6C0585E41E2BC6B20016B49E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6C0585E51E2BC6B20016B49E /* Build configuration list for PBXNativeTarget "Danmuku MirrorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6C0585E61E2BC6B20016B49E /* Debug */,
+				6C0585E71E2BC6B20016B49E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6C0585E81E2BC6B20016B49E /* Build configuration list for PBXNativeTarget "Danmuku MirrorUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6C0585E91E2BC6B20016B49E /* Debug */,
+				6C0585EA1E2BC6B20016B49E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6C0585B51E2BC6B20016B49E /* Project object */;
+}
