@@ -12,6 +12,8 @@ class MainMenu: NSMenu, NSMenuDelegate {
     
     // MARK: - IBActions
     
+    var standanoneDanmukuWindowController: StandaloneDanmukuWindowController?
+    
     @IBAction func toggleConnect(_ sender: NSMenuItem) {
         if DanmukuHandler.shared.isDisconnected {
             DanmukuHandler.shared.start()
@@ -22,12 +24,26 @@ class MainMenu: NSMenu, NSMenuDelegate {
         }
     }
     
+    @IBAction func showStandAloneWindow(_ sender: NSMenuItem) {
+        if standanoneDanmukuWindowController == nil {
+            standanoneDanmukuWindowController = StandaloneDanmukuWindowController()
+        }
+        
+        if standanoneDanmukuWindowController!.window!.isVisible {
+            standanoneDanmukuWindowController?.close()
+            sender.state = NSControl.StateValue.offState
+        } else {
+            standanoneDanmukuWindowController?.showWindow(self)
+            sender.state = NSControl.StateValue.onState
+        }
+    }
+    
     // quit
     @IBAction func quitAction(_ sender: NSMenuItem) {
         if !(DanmukuHandler.shared.isDisconnected) {
             DanmukuHandler.shared.stop()
         }
-        NSApplication.shared().terminate(self)
+        NSApplication.shared.terminate(self)
     }
     
     // MARK: - Delegate

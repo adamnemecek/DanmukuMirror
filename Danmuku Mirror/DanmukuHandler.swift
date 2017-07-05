@@ -28,8 +28,12 @@ protocol DanmukuHandlerDelegate: class {
 
 extension DanmukuHandlerDelegate {
     func statusDidChange(status: ConnectStatus) {}
-    func didReceviedOnlineCount(_ online: Int) {}
-    func didReceviedData(rawJson: JSON) {}
+    func didReceviedOnlineCount(_ online: Int) {
+//        print("online: \(online)")
+    }
+    func didReceviedData(rawJson: JSON) {
+//        print("rawJSON: \(rawJson)")
+    }
     func didUnpackData(type: DanmukuType, package: AnyObject) {}
 }
 
@@ -43,6 +47,7 @@ class DanmukuHandler: NSObject, StreamDelegate {
     fileprivate var inputStream: InputStream?
     fileprivate var outputStream: OutputStream?
     fileprivate var timer: Timer?
+    fileprivate var streamTimer: Timer?
     
     public var status = ConnectStatus.disconnected
     public var isConnected: Bool { get { return status == .connected } }
@@ -62,7 +67,8 @@ class DanmukuHandler: NSObject, StreamDelegate {
         
         changeStatus(to: .connnecting)
         
-        if !isCached {
+//        if !isCached {
+        if true {
             Util.httpGet(from: "http://live.bilibili.com/\(roomId)", { (result, error) in
                 guard error == nil else {
                     self.changeStatus(to: .disconnected)
@@ -117,13 +123,11 @@ class DanmukuHandler: NSObject, StreamDelegate {
             timer?.invalidate()
             timer = nil
             
+            streamTimer?.invalidate()
+            streamTimer = nil
+            
             changeStatus(to: .disconnected)
         }
-    }
-    
-    fileprivate func reconnect() {
-        stop()
-        start()
     }
     
     fileprivate func openConnection(to room: Int, with server: String, at port: UInt32) {
@@ -137,24 +141,34 @@ class DanmukuHandler: NSObject, StreamDelegate {
         outputStream = writeStream?.takeRetainedValue()
         inputStream!.schedule(in: RunLoop.current, forMode: .defaultRunLoopMode)
         outputStream!.schedule(in: RunLoop.current, forMode: .defaultRunLoopMode)
-        inputStream?.delegate = self
-        outputStream?.delegate = self
+//        inputStream?.delegate = self
+//        outputStream?.delegate = self
         inputStream!.open()
         outputStream!.open()
         
         let uid = 1000000000 + arc4random() % 2000000000
         let joinRoomMsg = "{\"roomid\": \(room), \"uid\": \(uid)}".data(using: .utf8)!
         
-        self.send(outputStream!, totalLength: joinRoomMsg.count + 16, headerLength: 16, protocolVersion: 1, action: 7, param5: 1, data: joinRoomMsg)
+        self.send(outputStream!, totalLength: Int32(joinRoomMsg.count + 16), headerLength: 16, protocolVersion: 1, action: 7, param5: 1, data: joinRoomMsg)
         
         // send heartbeat
         self.sendHeartbeat()
+        
+        DispatchQueue.global(qos: .userInitiated).async {
+            self.readStream(inputStream: self.inputStream!)
+        }
+        
+        
     }
     
     fileprivate func sendHeartbeat() {
-        timer = Timer.scheduledTimer(withTimeInterval: 3, repeats: true) {_ in
+        print(#function)
+//        timer = Timer.scheduledTimer(withTimeInterval: 3, repeats: true) {_ in
+//            self.send(self.outputStream!, totalLength: 16, headerLength: 16, protocolVersion: 1, action: 2, param5: 1, data: nil)
+//        }
+        timer = Timer(timeInterval: 3, repeats: true, block: {_ in
             self.send(self.outputStream!, totalLength: 16, headerLength: 16, protocolVersion: 1, action: 2, param5: 1, data: nil)
-        }
+        })
         RunLoop.main.add(timer!, forMode: .commonModes)
     }
     
@@ -183,19 +197,43 @@ class DanmukuHandler: NSObject, StreamDelegate {
         }
     }
     
-    internal func stream(_ aStream: Stream, handle eventCode: Stream.Event) {
-        if eventCode == Stream.Event.hasBytesAvailable {
-            let inputStream = aStream as! InputStream
-            var buffer = [UInt8](repeating: 0, count: 10240)
-            let result = inputStream.read(&buffer, maxLength: buffer.count)
-            if result > 0 {
-                let receivedData = [UInt8](buffer[0..<result])
-                self.analyze(receivedData)
+//    internal func stream(_ aStream: Stream, handle eventCode: Stream.Event) {
+//        if eventCode == Stream.Event.hasBytesAvailable {
+//            Swift.print("stram event code: hasBytesAvailable")
+//            let inputStream = aStream as! InputStream
+//            var buffer = [UInt8](repeating: 0, count: 10240)
+//            let result = inputStream.read(&buffer, maxLength: buffer.count)
+//            if result > 0 {
+//                let receivedData = [UInt8](buffer[0..<result])
+//                self.analyze(receivedData)
+//            }
+//        } else if eventCode == .endEncountered {
+//            Swift.print("stram event code: endEncountered")
+//        } else if eventCode == .errorOccurred {
+//            Swift.print("stram event code: errorOccurred")
+//        } else if eventCode == .hasSpaceAvailable {
+//            Swift.print("stram event code: hasSpaceAvailable")
+//        } else if eventCode == .openCompleted {
+//            Swift.print("stram event code: openCompleted")
+//        }
+//    }
+    
+    // bad way to read data, but since stream delegate is broken (yet again), it works fine
+    func readStream(inputStream: InputStream) {
+        while true {
+            if inputStream.hasBytesAvailable {
+                var buffer = [UInt8](repeating: 0, count: 10240)
+                
+                let result = inputStream.read(&buffer, maxLength: buffer.count)
+                if result > 0 {
+                    let receivedData = [UInt8](buffer[0..<result])
+                    self.analyze(receivedData)
+                }
+//                print("hasBytesAvaiable")
             }
-        } else {
-            Swift.print("stram event code \(eventCode)")
         }
     }
+    
     
     fileprivate func analyze(_ data: [UInt8]) {
         var received = data
@@ -231,9 +269,12 @@ class DanmukuHandler: NSObject, StreamDelegate {
                     
                     // Unpack
                     switch json["cmd"] {
-                    case "DANMU_MSG": delegates.invoke { $0.didUnpackData(type: .regular, package: RegularDanmuku(json: json)) }
-                    case "SEND_GIFT": delegates.invoke { $0.didUnpackData(type: .gift,    package: GiftDanmuku(json: json))    }
-                    case   "WELCOME": delegates.invoke { $0.didUnpackData(type: .welcome, package: WelcomeDanmuku(json: json)) }
+                    case "DANMU_MSG":
+                        DispatchQueue.main.async {
+                            DanmukuPool.shared.add(danmuku: RegularDanmuku(json: json))
+                        }
+//                    case "SEND_GIFT": DanmukuPool.shared.add(danmuku: GiftDanmuku(json: json))
+//                    case   "WELCOME": DanmukuPool.shared.add(danmuku: WelcomeDanmuku(json: json))
                     default:          print("undefined cmd")
                     }
                 }
@@ -245,6 +286,8 @@ class DanmukuHandler: NSObject, StreamDelegate {
     }
     
     fileprivate func send(_ outputStream: OutputStream, totalLength: Int32, headerLength: CShort, protocolVersion: CShort, action: Int32, param5: Int32, data: Data?) {
+        print(#function)
+        
         var totalLengthBE = totalLength.bigEndian
         var headerLengthBE = headerLength.bigEndian
         var protocolVersionBE = protocolVersion.bigEndian

@@ -7,9 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6C050D6C1E44F66100F262C2 /* MusicStationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C050D6B1E44F66100F262C2 /* MusicStationViewController.swift */; };
 		6C0585C11E2BC6B20016B49E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0585C01E2BC6B20016B49E /* AppDelegate.swift */; };
-		6C0585C31E2BC6B20016B49E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0585C21E2BC6B20016B49E /* ViewController.swift */; };
 		6C0585C51E2BC6B20016B49E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C0585C41E2BC6B20016B49E /* Assets.xcassets */; };
 		6C0585C81E2BC6B20016B49E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C0585C61E2BC6B20016B49E /* Main.storyboard */; };
 		6C0585D31E2BC6B20016B49E /* Danmuku_MirrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0585D21E2BC6B20016B49E /* Danmuku_MirrorTests.swift */; };
@@ -20,18 +18,18 @@
 		6C0585F61E2BC6EA0016B49E /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0585F41E2BC6EA0016B49E /* SwiftyJSON.swift */; };
 		6C0585F71E2BC6EA0016B49E /* HandyExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0585F51E2BC6EA0016B49E /* HandyExtension.swift */; };
 		6C0585FA1E2BCB5A0016B49E /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0585F91E2BCB5A0016B49E /* MainMenu.swift */; };
-		6C1A93CC1E2F5FB2004680CC /* DanmukuWindowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1A93CB1E2F5FB2004680CC /* DanmukuWindowViewController.swift */; };
-		6C32EA3D1E2E5D050003A780 /* AboutWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C32EA3C1E2E5D050003A780 /* AboutWindowController.swift */; };
-		6C32EA3F1E2E5EF80003A780 /* AboutWindowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C32EA3E1E2E5EF80003A780 /* AboutWindowViewController.swift */; };
-		6C44767F1E3B7974000EE9E1 /* SettingGeneralTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C44767E1E3B7974000EE9E1 /* SettingGeneralTabViewController.swift */; };
-		6C4476821E433A78000EE9E1 /* MusicStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C4476811E433A78000EE9E1 /* MusicStation.swift */; };
-		6C4476861E43604B000EE9E1 /* AccessoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C4476851E43604B000EE9E1 /* AccessoryViewController.swift */; };
-		6C4476881E436B63000EE9E1 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C4476871E436B63000EE9E1 /* Song.swift */; };
-		6C56F8211E39F81900DAE713 /* SettingWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C56F8201E39F81900DAE713 /* SettingWindowController.swift */; };
+		6C2FECDA1EF538DB00A83553 /* DanmukuListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C2FECD91EF538DB00A83553 /* DanmukuListViewController.swift */; };
+		6C2FECF91EF5457100A83553 /* AccessorySplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C2FECF81EF5457100A83553 /* AccessorySplitViewController.swift */; };
+		6C86D5701EFBBE8E0090DCFE /* DMTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C86D56F1EFBBE8E0090DCFE /* DMTableView.swift */; };
 		6C91D9BE1E2FD5A4008D0A0F /* MulticastDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C91D9BD1E2FD5A4008D0A0F /* MulticastDelegate.swift */; };
-		6C91D9F91E32039F008D0A0F /* DanmukuWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C91D9F81E32039F008D0A0F /* DanmukuWindowController.swift */; };
+		6C9314321EF514EF00DBE89D /* StandaloneDanmukuWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C9314301EF514EF00DBE89D /* StandaloneDanmukuWindowController.swift */; };
+		6C9314371EF51B7E00DBE89D /* StandaloneDanmukuRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C9314361EF51B7E00DBE89D /* StandaloneDanmukuRootViewController.swift */; };
+		6CA2ACCE1EF5654700577070 /* DMFloatingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA2ACCD1EF5654700577070 /* DMFloatingButton.swift */; };
+		6CA2ACD21EF7ADCF00577070 /* DanmukuPool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA2ACD11EF7ADCF00577070 /* DanmukuPool.swift */; };
+		6CA2ACD71EF7B3CF00577070 /* StandaloneDanmukuTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA2ACD61EF7B3CF00577070 /* StandaloneDanmukuTableCellView.swift */; };
+		6CA2ACDB1EF8D93700577070 /* DMTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA2ACDA1EF8D93700577070 /* DMTextField.swift */; };
 		6CAC20841E71506D00A69A3E /* DMColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CAC20831E71506D00A69A3E /* DMColor.swift */; };
-		6CE914FF1E472FA90006D266 /* RingBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE914FE1E472FA90006D266 /* RingBuffer.swift */; };
+		6CF896391EFC1E230051EE7A /* StandaloneDanmukuWindowTitlebarAccessoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF896381EFC1E230051EE7A /* StandaloneDanmukuWindowTitlebarAccessoryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,10 +50,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		6C050D6B1E44F66100F262C2 /* MusicStationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicStationViewController.swift; sourceTree = "<group>"; };
 		6C0585BD1E2BC6B20016B49E /* Danmuku Mirror.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Danmuku Mirror.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C0585C01E2BC6B20016B49E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6C0585C21E2BC6B20016B49E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6C0585C41E2BC6B20016B49E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6C0585C71E2BC6B20016B49E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6C0585C91E2BC6B20016B49E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -71,18 +67,18 @@
 		6C0585F41E2BC6EA0016B49E /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		6C0585F51E2BC6EA0016B49E /* HandyExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HandyExtension.swift; sourceTree = "<group>"; };
 		6C0585F91E2BCB5A0016B49E /* MainMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenu.swift; sourceTree = "<group>"; };
-		6C1A93CB1E2F5FB2004680CC /* DanmukuWindowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DanmukuWindowViewController.swift; sourceTree = "<group>"; };
-		6C32EA3C1E2E5D050003A780 /* AboutWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutWindowController.swift; sourceTree = "<group>"; };
-		6C32EA3E1E2E5EF80003A780 /* AboutWindowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutWindowViewController.swift; sourceTree = "<group>"; };
-		6C44767E1E3B7974000EE9E1 /* SettingGeneralTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingGeneralTabViewController.swift; sourceTree = "<group>"; };
-		6C4476811E433A78000EE9E1 /* MusicStation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicStation.swift; sourceTree = "<group>"; };
-		6C4476851E43604B000EE9E1 /* AccessoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessoryViewController.swift; sourceTree = "<group>"; };
-		6C4476871E436B63000EE9E1 /* Song.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
-		6C56F8201E39F81900DAE713 /* SettingWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingWindowController.swift; sourceTree = "<group>"; };
+		6C2FECD91EF538DB00A83553 /* DanmukuListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DanmukuListViewController.swift; sourceTree = "<group>"; };
+		6C2FECF81EF5457100A83553 /* AccessorySplitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessorySplitViewController.swift; sourceTree = "<group>"; };
+		6C86D56F1EFBBE8E0090DCFE /* DMTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DMTableView.swift; sourceTree = "<group>"; };
 		6C91D9BD1E2FD5A4008D0A0F /* MulticastDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MulticastDelegate.swift; path = ../MulticastDelegate.swift; sourceTree = "<group>"; };
-		6C91D9F81E32039F008D0A0F /* DanmukuWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DanmukuWindowController.swift; sourceTree = "<group>"; };
+		6C9314301EF514EF00DBE89D /* StandaloneDanmukuWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StandaloneDanmukuWindowController.swift; sourceTree = "<group>"; };
+		6C9314361EF51B7E00DBE89D /* StandaloneDanmukuRootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StandaloneDanmukuRootViewController.swift; sourceTree = "<group>"; };
+		6CA2ACCD1EF5654700577070 /* DMFloatingButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMFloatingButton.swift; sourceTree = "<group>"; };
+		6CA2ACD11EF7ADCF00577070 /* DanmukuPool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DanmukuPool.swift; sourceTree = "<group>"; };
+		6CA2ACD61EF7B3CF00577070 /* StandaloneDanmukuTableCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StandaloneDanmukuTableCellView.swift; sourceTree = "<group>"; };
+		6CA2ACDA1EF8D93700577070 /* DMTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMTextField.swift; sourceTree = "<group>"; };
 		6CAC20831E71506D00A69A3E /* DMColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DMColor.swift; path = ../DMColor.swift; sourceTree = "<group>"; };
-		6CE914FE1E472FA90006D266 /* RingBuffer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RingBuffer.swift; sourceTree = "<group>"; };
+		6CF896381EFC1E230051EE7A /* StandaloneDanmukuWindowTitlebarAccessoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandaloneDanmukuWindowTitlebarAccessoryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +133,7 @@
 				6C0585C61E2BC6B20016B49E /* Main.storyboard */,
 				6C0585F91E2BCB5A0016B49E /* MainMenu.swift */,
 				6C0585EC1E2BC6D20016B49E /* Model */,
+				6CA2ACD31EF7ADE300577070 /* ViewModelOrSo */,
 				6C0585F81E2BC70C0016B49E /* Controller */,
 				6C0585EB1E2BC6C10016B49E /* Supporting Files */,
 			);
@@ -164,13 +161,13 @@
 		6C0585EB1E2BC6C10016B49E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6CA2ACD81EF8D90300577070 /* CustomClass */,
 				6CAC20831E71506D00A69A3E /* DMColor.swift */,
 				6C0585F41E2BC6EA0016B49E /* SwiftyJSON.swift */,
 				6C0585F51E2BC6EA0016B49E /* HandyExtension.swift */,
 				6C91D9BD1E2FD5A4008D0A0F /* MulticastDelegate.swift */,
 				6C0585C41E2BC6B20016B49E /* Assets.xcassets */,
 				6C0585C91E2BC6B20016B49E /* Info.plist */,
-				6CE914FE1E472FA90006D266 /* RingBuffer.swift */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -197,10 +194,10 @@
 		6C0585F81E2BC70C0016B49E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				6C56F81F1E39F7BC00DAE713 /* Setting Window */,
-				6C56F81E1E39F7A200DAE713 /* Danmuku Window */,
-				6C56F81D1E39F79100DAE713 /* About Window */,
-				6C0585C21E2BC6B20016B49E /* ViewController.swift */,
+				6C9314301EF514EF00DBE89D /* StandaloneDanmukuWindowController.swift */,
+				6CF896381EFC1E230051EE7A /* StandaloneDanmukuWindowTitlebarAccessoryViewController.swift */,
+				6C9314361EF51B7E00DBE89D /* StandaloneDanmukuRootViewController.swift */,
+				6C9314381EF51D1C00DBE89D /* SplitViewItems */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -208,39 +205,60 @@
 		6C4476801E433A3C000EE9E1 /* Plugins */ = {
 			isa = PBXGroup;
 			children = (
-				6C4476811E433A78000EE9E1 /* MusicStation.swift */,
-				6C4476871E436B63000EE9E1 /* Song.swift */,
 			);
 			name = Plugins;
 			sourceTree = "<group>";
 		};
-		6C56F81D1E39F79100DAE713 /* About Window */ = {
+		6C9314381EF51D1C00DBE89D /* SplitViewItems */ = {
 			isa = PBXGroup;
 			children = (
-				6C32EA3C1E2E5D050003A780 /* AboutWindowController.swift */,
-				6C32EA3E1E2E5EF80003A780 /* AboutWindowViewController.swift */,
+				6CA2ACD01EF66CD700577070 /* AccessoryPanel */,
+				6CA2ACCF1EF66CCE00577070 /* DanmukuList */,
 			);
-			name = "About Window";
+			name = SplitViewItems;
 			sourceTree = "<group>";
 		};
-		6C56F81E1E39F7A200DAE713 /* Danmuku Window */ = {
+		6CA2ACCF1EF66CCE00577070 /* DanmukuList */ = {
 			isa = PBXGroup;
 			children = (
-				6C91D9F81E32039F008D0A0F /* DanmukuWindowController.swift */,
-				6C1A93CB1E2F5FB2004680CC /* DanmukuWindowViewController.swift */,
-				6C4476851E43604B000EE9E1 /* AccessoryViewController.swift */,
-				6C050D6B1E44F66100F262C2 /* MusicStationViewController.swift */,
+				6C2FECD91EF538DB00A83553 /* DanmukuListViewController.swift */,
+				6CA2ACD61EF7B3CF00577070 /* StandaloneDanmukuTableCellView.swift */,
 			);
-			name = "Danmuku Window";
+			name = DanmukuList;
 			sourceTree = "<group>";
 		};
-		6C56F81F1E39F7BC00DAE713 /* Setting Window */ = {
+		6CA2ACD01EF66CD700577070 /* AccessoryPanel */ = {
 			isa = PBXGroup;
 			children = (
-				6C56F8201E39F81900DAE713 /* SettingWindowController.swift */,
-				6C44767E1E3B7974000EE9E1 /* SettingGeneralTabViewController.swift */,
+				6C2FECF81EF5457100A83553 /* AccessorySplitViewController.swift */,
 			);
-			name = "Setting Window";
+			name = AccessoryPanel;
+			sourceTree = "<group>";
+		};
+		6CA2ACD31EF7ADE300577070 /* ViewModelOrSo */ = {
+			isa = PBXGroup;
+			children = (
+				6CA2ACD11EF7ADCF00577070 /* DanmukuPool.swift */,
+			);
+			name = ViewModelOrSo;
+			sourceTree = "<group>";
+		};
+		6CA2ACD81EF8D90300577070 /* CustomClass */ = {
+			isa = PBXGroup;
+			children = (
+				6CA2ACD91EF8D90F00577070 /* Subclasses */,
+				6CA2ACCD1EF5654700577070 /* DMFloatingButton.swift */,
+			);
+			name = CustomClass;
+			sourceTree = "<group>";
+		};
+		6CA2ACD91EF8D90F00577070 /* Subclasses */ = {
+			isa = PBXGroup;
+			children = (
+				6CA2ACDA1EF8D93700577070 /* DMTextField.swift */,
+				6C86D56F1EFBBE8E0090DCFE /* DMTableView.swift */,
+			);
+			name = Subclasses;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -376,26 +394,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6C4476881E436B63000EE9E1 /* Song.swift in Sources */,
-				6CE914FF1E472FA90006D266 /* RingBuffer.swift in Sources */,
-				6C4476821E433A78000EE9E1 /* MusicStation.swift in Sources */,
-				6C32EA3F1E2E5EF80003A780 /* AboutWindowViewController.swift in Sources */,
-				6C4476861E43604B000EE9E1 /* AccessoryViewController.swift in Sources */,
-				6C44767F1E3B7974000EE9E1 /* SettingGeneralTabViewController.swift in Sources */,
-				6C0585C31E2BC6B20016B49E /* ViewController.swift in Sources */,
-				6C050D6C1E44F66100F262C2 /* MusicStationViewController.swift in Sources */,
+				6CA2ACDB1EF8D93700577070 /* DMTextField.swift in Sources */,
+				6CA2ACD71EF7B3CF00577070 /* StandaloneDanmukuTableCellView.swift in Sources */,
+				6CA2ACCE1EF5654700577070 /* DMFloatingButton.swift in Sources */,
+				6C9314321EF514EF00DBE89D /* StandaloneDanmukuWindowController.swift in Sources */,
 				6C0585F21E2BC6E40016B49E /* Danmuku.swift in Sources */,
 				6CAC20841E71506D00A69A3E /* DMColor.swift in Sources */,
+				6C2FECF91EF5457100A83553 /* AccessorySplitViewController.swift in Sources */,
 				6C0585F71E2BC6EA0016B49E /* HandyExtension.swift in Sources */,
-				6C91D9F91E32039F008D0A0F /* DanmukuWindowController.swift in Sources */,
-				6C1A93CC1E2F5FB2004680CC /* DanmukuWindowViewController.swift in Sources */,
+				6CA2ACD21EF7ADCF00577070 /* DanmukuPool.swift in Sources */,
 				6C0585FA1E2BCB5A0016B49E /* MainMenu.swift in Sources */,
+				6C9314371EF51B7E00DBE89D /* StandaloneDanmukuRootViewController.swift in Sources */,
 				6C0585F31E2BC6E40016B49E /* Util.swift in Sources */,
+				6C86D5701EFBBE8E0090DCFE /* DMTableView.swift in Sources */,
 				6C0585F61E2BC6EA0016B49E /* SwiftyJSON.swift in Sources */,
-				6C32EA3D1E2E5D050003A780 /* AboutWindowController.swift in Sources */,
-				6C56F8211E39F81900DAE713 /* SettingWindowController.swift in Sources */,
+				6CF896391EFC1E230051EE7A /* StandaloneDanmukuWindowTitlebarAccessoryViewController.swift in Sources */,
 				6C0585C11E2BC6B20016B49E /* AppDelegate.swift in Sources */,
 				6C0585F11E2BC6E40016B49E /* DanmukuHandler.swift in Sources */,
+				6C2FECDA1EF538DB00A83553 /* DanmukuListViewController.swift in Sources */,
 				6C91D9BE1E2FD5A4008D0A0F /* MulticastDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -540,9 +556,10 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "Danmuku Mirror/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.IxanProduction.Danmuku-Mirror";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -553,9 +570,10 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "Danmuku Mirror/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.IxanProduction.Danmuku-Mirror";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};

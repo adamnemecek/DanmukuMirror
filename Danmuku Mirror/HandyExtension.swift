@@ -10,7 +10,7 @@ import Cocoa
 import AVFoundation
 
 extension NSView {
-    var backgroundColor: NSColor? {
+    var layerBackgroundColor: NSColor? {
         get {
             if let colorRef = self.layer?.backgroundColor {
                 return NSColor(cgColor: colorRef)!
@@ -21,6 +21,25 @@ extension NSView {
         set {
             self.wantsLayer = true
             self.layer?.backgroundColor = newValue?.cgColor
+        }
+    }
+    
+    func anchor(to: NSView, top: Bool, bottom: Bool, leading: Bool, trailing: Bool) {
+        self.topAnchor.constraint(equalTo: to.topAnchor).isActive = top
+        self.bottomAnchor.constraint(equalTo: to.bottomAnchor).isActive = bottom
+        self.leadingAnchor.constraint(equalTo: to.leadingAnchor).isActive = leading
+        self.trailingAnchor.constraint(equalTo: to.trailingAnchor).isActive = trailing
+    }
+    
+    /// Add autolayout constraint to current view
+    func constraint(_ attr: NSLayoutConstraint.Attribute, _ relatedBy: NSLayoutConstraint.Relation, to item: Any?, _ attribute: NSLayoutConstraint.Attribute, multiplier: CGFloat, constant: CGFloat) {
+            self.addConstraint(NSLayoutConstraint(item: self, attribute: attr, relatedBy: relatedBy, toItem: item, attribute: attribute, multiplier: multiplier, constant: constant))
+    }
+    
+    /// Add autolayout constraint to superview (if any)
+    func superConstraint(_ attr: NSLayoutConstraint.Attribute, _ relatedBy: NSLayoutConstraint.Relation, to item: Any?, _ attribute: NSLayoutConstraint.Attribute, multiplier: CGFloat, constant: CGFloat) {
+        if let superview = self.superview {
+            superview.addConstraint(NSLayoutConstraint(item: self, attribute: attr, relatedBy: relatedBy, toItem: item, attribute: attribute, multiplier: multiplier, constant: constant))
         }
     }
 }
@@ -38,17 +57,52 @@ extension NSTableView {
 }
 
 extension AVPlayer {
-    dynamic var isPlaying: Bool {
+    @objc dynamic var isPlaying: Bool {
         return rate != 0 && error == nil
     }
 }
 
+extension NSAttributedString {
+    func height(forWidth: CGFloat) -> CGFloat {
+        let textWidth = ceil(self.size().width)
+        let rows: CGFloat = ceil(textWidth / forWidth)
+        let height = rows * 17
+        
+        return height
+        
+//        if self.size().width <= forWidth {
+//            // return default height for a single line
+//            let layoutManager = NSLayoutManager()
+//            var font = NSFont.systemFont(ofSize: NSFont.systemFontSize())
+//            
+//            if let attributedFont = self.attribute(NSFontAttributeName, at: 0, effectiveRange: nil) as? NSFont {
+//                font = attributedFont
+//            }
+//            
+//            return layoutManager.defaultLineHeight(for: font)
+//            
+//        } else {
+//            let containerSize = NSMakeSize(forWidth, CGFloat(Float.greatestFiniteMagnitude))
+//            let textContainer = NSTextContainer(containerSize: containerSize)
+//            let textStorage = NSTextStorage(attributedString: self)
+//            let layoutManager = NSLayoutManager()
+//            
+//            layoutManager.addTextContainer(textContainer)
+//            textStorage.addLayoutManager(layoutManager)
+//            layoutManager.hyphenationFactor = 0
+//            
+//            layoutManager.glyphRange(for: textContainer)
+//            return layoutManager.usedRect(for: textContainer).size.height
+//        }
+    }
+}
 
 /// A special handy class for easy accessing the user defaults
 class profile {
     // General
     static var room: Int {
-        get { return UserDefaults.standard.integer(forKey: "dm.user.room") }
+//        get { return UserDefaults.standard.integer(forKey: "dm.user.room") }
+        get { return 139 }
         set { UserDefaults.standard.set(newValue, forKey: "dm.user.room") }
     }
     static var cachedRoom: Int {
